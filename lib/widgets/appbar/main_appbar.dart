@@ -1,31 +1,27 @@
-import 'package:expense_tracker/theme/app_colors.dart';
+import 'package:expense_tracker/theme/app_assets.dart';
+import 'package:expense_tracker/theme/app_dimens.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter/material.dart';
 
-class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
+class CustomMainAppBar extends StatelessWidget implements PreferredSizeWidget {
   final onTap;
-  final navigateCardDetail;
 
-  CustomAppBar({this.navigateCardDetail = true, this.onTap});
+  CustomMainAppBar({this.onTap});
 
   @override
   Widget build(BuildContext context) {
     return AppBar(
       elevation: 0,
-      iconTheme: IconThemeData(
-        color: Colors.black, //change your color here
-      ),
+      titleSpacing: 0,
       title: Row(
         children: [
-          IconButton(
-              onPressed: () {},
-              icon: Icon(
-                Icons.arrow_back,
-                color: AppColors.white,
-              )),
-          Text("Add expense"),
+          Image.asset(AppAssets.logoImage),
+          Expanded(child: Container()),
+          SvgPicture.asset(AppAssets.bell),
+          SizedBox(width: Dimens.grid20),
+          SvgPicture.asset(AppAssets.user),
         ],
       ),
-      // centerTitle: true,
     );
   }
 

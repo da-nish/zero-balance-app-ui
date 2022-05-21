@@ -1,13 +1,8 @@
 import 'package:get/get.dart';
 import 'package:expense_tracker/api/api.dart';
 
-class DashboardController extends GetxController {
-  String username = "";
+class SpendCategoryController extends GetxController {
   List<List<Restaurant>> history = [<Restaurant>[]];
-
-  void setName(String name) {
-    username = name;
-  }
 
   String? dropdownvalue;
   // List of items in our dropdown menu

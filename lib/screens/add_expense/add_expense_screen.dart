@@ -1,5 +1,5 @@
-import 'package:expense_tracker/screens/dashboard/dashboard_controller.dart';
-import 'package:expense_tracker/screens/dashboard/widget/history_card.dart';
+import 'package:expense_tracker/screens/add_expense/add_expense_controller.dart';
+import 'package:expense_tracker/screens/add_expense/widget/history_card.dart';
 import 'package:expense_tracker/theme/app_assets.dart';
 import 'package:expense_tracker/theme/app_text_style.dart';
 import 'package:expense_tracker/theme/app_theme.dart';
@@ -11,12 +11,11 @@ import 'package:expense_tracker/theme/app_colors.dart';
 import 'package:get/get.dart';
 
 class AddExpenseScreen extends StatelessWidget {
-  final String name;
-  AddExpenseScreen(this.name);
+  AddExpenseScreen();
 
   @override
   Widget build(BuildContext context) {
-    final homeController = Get.find<DashboardController>();
+    final homeController = Get.find<AddExpenseController>();
     // homeController.setName(Get.arguments);
     return Scaffold(
       appBar: CustomAppBar(),

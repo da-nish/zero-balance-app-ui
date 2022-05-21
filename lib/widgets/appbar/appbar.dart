@@ -3,25 +3,24 @@ import 'package:flutter/material.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final onTap;
-  final navigateCardDetail;
+  final bool showBackButton;
 
-  CustomAppBar({this.navigateCardDetail = true, this.onTap});
+  CustomAppBar({this.onTap, this.showBackButton = false});
 
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      elevation: 0,
-      iconTheme: IconThemeData(
-        color: Colors.black, //change your color here
-      ),
+      excludeHeaderSemantics: false,
+      // elevation: 0,
       title: Row(
         children: [
-          IconButton(
-              onPressed: () {},
-              icon: Icon(
-                Icons.arrow_back,
-                color: AppColors.white,
-              )),
+          if (showBackButton)
+            IconButton(
+                onPressed: () {},
+                icon: Icon(
+                  Icons.arrow_back,
+                  color: AppColors.white,
+                )),
           Text("Add expense"),
         ],
       ),

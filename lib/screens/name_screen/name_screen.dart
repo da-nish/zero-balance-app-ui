@@ -48,7 +48,7 @@ class NameScreen extends StatelessWidget {
                     IconButton(
                         color: AppColors.blue,
                         onPressed: () {
-                          Get.offAndToNamed("/home",
+                          Get.offAndToNamed("/dashboard",
                               arguments: textController.text);
                         },
                         icon: Icon(Icons.arrow_forward))

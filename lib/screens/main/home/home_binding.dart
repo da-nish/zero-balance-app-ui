@@ -1,12 +1,11 @@
+import 'package:expense_tracker/screens/main/home/home_controller.dart';
 import 'package:get/get.dart';
 import 'package:expense_tracker/services/api_service.dart';
 
-import 'dashboard_controller.dart';
-
-class DashboardBinding extends Bindings {
+class HomeBinding extends Bindings {
   @override
   void dependencies() {
     Get.put(ApiService());
-    Get.put(DashboardController());
+    Get.put(HomeController());
   }
 }
