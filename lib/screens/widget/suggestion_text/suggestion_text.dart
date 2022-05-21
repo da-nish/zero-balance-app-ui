@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:getx_setup/api/api.dart';
-import 'package:getx_setup/models/model.dart';
-import 'package:getx_setup/screens/chat/chat_controller.dart';
-import 'package:getx_setup/theme/colors.dart';
+import 'package:expense_tracker/api/api.dart';
+import 'package:expense_tracker/models/model.dart';
+import 'package:expense_tracker/screens/chat/chat_controller.dart';
+import 'package:expense_tracker/theme/app_colors.dart';
 
 class SuggestionText extends StatelessWidget {
   final Restaurant text;
@@ -17,14 +17,14 @@ class SuggestionText extends StatelessWidget {
         child: ElevatedButton(
           child: Text(
             text.human!,
-            style: TextStyle(color: AppColor.grey),
+            style: TextStyle(color: AppColors.grey),
           ),
           style: ButtonStyle(
-            backgroundColor: MaterialStateProperty.all(AppColor.white),
+            backgroundColor: MaterialStateProperty.all(AppColors.white),
             shape: MaterialStateProperty.all<RoundedRectangleBorder>(
               RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(16),
-                  side: BorderSide(color: AppColor.backgroundColor)),
+                  side: BorderSide(color: AppColors.backgroundColor)),
             ),
           ),
           onPressed: () {

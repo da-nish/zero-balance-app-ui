@@ -1,5 +1,5 @@
 import 'package:get/get.dart';
-import 'package:getx_setup/services/api_service.dart';
+import 'package:expense_tracker/services/api_service.dart';
 
 import 'dashboard_controller.dart';
 

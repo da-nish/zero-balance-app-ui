@@ -1,5 +1,5 @@
 import 'package:get/get.dart';
-import 'package:getx_setup/api/api.dart';
+import 'package:expense_tracker/api/api.dart';
 
 class DashboardController extends GetxController {
   String username = "";

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getx_setup/api/api.dart';
-import 'package:getx_setup/models/model.dart';
-import 'package:getx_setup/screens/chat/chat_controller.dart';
-import 'package:getx_setup/screens/widget/suggestion_text/suggestion_text.dart';
-import 'package:getx_setup/theme/assets.dart';
+import 'package:expense_tracker/api/api.dart';
+import 'package:expense_tracker/models/model.dart';
+import 'package:expense_tracker/screens/chat/chat_controller.dart';
+import 'package:expense_tracker/screens/widget/suggestion_text/suggestion_text.dart';
+import 'package:expense_tracker/theme/app_assets.dart';
 import 'package:lottie/lottie.dart';
 import 'package:speech_to_text/speech_to_text.dart' as stt;
 

@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
-import 'package:getx_setup/api/api.dart';
-import 'package:getx_setup/models/model.dart';
-import 'package:getx_setup/screens/dashboard/dashboard_controller.dart';
+import 'package:expense_tracker/api/api.dart';
+import 'package:expense_tracker/models/model.dart';
+import 'package:expense_tracker/screens/dashboard/dashboard_controller.dart';
 
 class ChatController extends GetxController {
   List<Message> messages = <Message>[].obs;

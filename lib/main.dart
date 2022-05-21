@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getx_setup/screens/chat/chat_binding.dart';
-import 'package:getx_setup/screens/chat/chat_screen.dart';
-import 'package:getx_setup/screens/chat_topic_list/topiclist_binding.dart';
-import 'package:getx_setup/screens/chat_topic_list/topiclist_screen.dart';
-import 'package:getx_setup/screens/dashboard/dashboard_binding.dart';
-import 'package:getx_setup/screens/dashboard/dashboard_screen.dart';
-import 'package:getx_setup/screens/name_screen/name_binding.dart';
-import 'package:getx_setup/screens/name_screen/name_screen.dart';
+import 'package:expense_tracker/screens/chat/chat_binding.dart';
+import 'package:expense_tracker/screens/chat/chat_screen.dart';
+import 'package:expense_tracker/screens/chat_topic_list/topiclist_binding.dart';
+import 'package:expense_tracker/screens/chat_topic_list/topiclist_screen.dart';
+import 'package:expense_tracker/screens/dashboard/dashboard_binding.dart';
+import 'package:expense_tracker/screens/dashboard/dashboard_screen.dart';
+import 'package:expense_tracker/screens/name_screen/name_binding.dart';
+import 'package:expense_tracker/screens/name_screen/name_screen.dart';
 
 void main() {
   runApp(MyApp());

@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getx_setup/screens/dashboard/dashboard_controller.dart';
-import 'package:getx_setup/screens/dashboard/widget/history_card.dart';
-import 'package:getx_setup/theme/colors.dart';
+import 'package:expense_tracker/screens/dashboard/dashboard_controller.dart';
+import 'package:expense_tracker/theme/app_colors.dart';
 
 class DashboardScreen extends StatelessWidget {
   final String name;
@@ -13,22 +12,37 @@ class DashboardScreen extends StatelessWidget {
     final homeController = Get.find<DashboardController>();
     homeController.setName(Get.arguments);
     return Scaffold(
-      backgroundColor: AppColor.backgroundColor,
+      backgroundColor: AppColors.backgroundColor,
       appBar: AppBar(
         title: Text("Dashboard"),
       ),
       body: Container(
         width: double.infinity,
-        child: ListView.builder(
-            itemCount: homeController.history.length,
-            itemBuilder: ((context, index) => History(index + 1))),
+        child: ListView(
+          children: [
+            card1(),
+            card1(),
+            card1(),
+          ],
+        ),
       ),
-      floatingActionButton: FloatingActionButton.extended(
-        onPressed: () {
-          Get.toNamed("/topic-list");
-        },
-        icon: Icon(Icons.messenger_outline),
-        label: Text("Start new conversation"),
+    );
+  }
+
+  Widget card1() {
+    return Container(
+      height: 50,
+      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+      decoration: BoxDecoration(
+          color: AppColors.dark, borderRadius: BorderRadius.circular(5)),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Text(
+            "Left",
+          ),
+          Text("right")
+        ],
       ),
     );
   }

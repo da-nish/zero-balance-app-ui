@@ -1,4 +1,4 @@
-# getx_setup
+# expense_tracker
 
 A new Flutter project.
 

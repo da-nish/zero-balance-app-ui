@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getx_setup/theme/colors.dart';
+import 'package:expense_tracker/theme/app_colors.dart';
 
 class NameScreen extends StatelessWidget {
   @override
@@ -8,7 +8,7 @@ class NameScreen extends StatelessWidget {
     TextEditingController textController = TextEditingController();
 
     return Scaffold(
-        backgroundColor: AppColor.backgroundColor,
+        backgroundColor: AppColors.backgroundColor,
         appBar: AppBar(
           title: Text("User Name"),
         ),
@@ -24,13 +24,13 @@ class NameScreen extends StatelessWidget {
                 style: TextStyle(
                     fontSize: 40,
                     fontWeight: FontWeight.bold,
-                    color: AppColor.grey),
+                    color: AppColors.grey),
               ),
               SizedBox(height: 30),
               Container(
                 margin: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                 decoration: BoxDecoration(
-                    color: AppColor.white,
+                    color: AppColors.white,
                     borderRadius: BorderRadius.circular(50)),
                 child: Row(
                   children: [
@@ -47,7 +47,7 @@ class NameScreen extends StatelessWidget {
                       ),
                     ),
                     IconButton(
-                        color: AppColor.blue,
+                        color: AppColors.blue,
                         onPressed: () {
                           Get.offAndToNamed("/home",
                               arguments: textController.text);

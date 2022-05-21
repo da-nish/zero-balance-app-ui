@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getx_setup/theme/colors.dart';
+import 'package:expense_tracker/theme/app_colors.dart';
 
 class TopicListScreen extends StatelessWidget {
   @override
@@ -8,7 +8,7 @@ class TopicListScreen extends StatelessWidget {
     // final apiService = Get.find<ApiService>();
 
     return Scaffold(
-      backgroundColor: AppColor.backgroundColor,
+      backgroundColor: AppColors.backgroundColor,
       appBar: AppBar(
         title: Text("Topic List"),
         leading: IconButton(
@@ -24,7 +24,8 @@ class TopicListScreen extends StatelessWidget {
           Container(
             margin: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
             decoration: BoxDecoration(
-                color: AppColor.white, borderRadius: BorderRadius.circular(10)),
+                color: AppColors.white,
+                borderRadius: BorderRadius.circular(10)),
             height: 100,
             child: Row(
               children: [
@@ -43,7 +44,7 @@ class TopicListScreen extends StatelessWidget {
                           style: TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight.bold,
-                              color: AppColor.grey),
+                              color: AppColors.grey),
                         )),
                   ],
                 )

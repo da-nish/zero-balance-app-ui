@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getx_setup/api/api.dart';
-import 'package:getx_setup/models/model.dart';
-import 'package:getx_setup/screens/bottom_sheet/bottom_sheet.dart';
-import 'package:getx_setup/screens/chat/chat_controller.dart';
-import 'package:getx_setup/screens/chat/widget/message_bubble.dart';
-import 'package:getx_setup/screens/widget/suggestion_text/suggestion_text.dart';
-import 'package:getx_setup/theme/colors.dart';
+import 'package:expense_tracker/api/api.dart';
+import 'package:expense_tracker/models/model.dart';
+import 'package:expense_tracker/screens/bottom_sheet/bottom_sheet.dart';
+import 'package:expense_tracker/screens/chat/chat_controller.dart';
+import 'package:expense_tracker/screens/chat/widget/message_bubble.dart';
+import 'package:expense_tracker/screens/widget/suggestion_text/suggestion_text.dart';
+import 'package:expense_tracker/theme/app_colors.dart';
 
 class ChatScreen extends StatefulWidget {
   @override
@@ -37,7 +37,7 @@ class _ChatScreenState extends State<ChatScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColor.backgroundColor,
+      backgroundColor: AppColors.backgroundColor,
       appBar: AppBar(
         title: Text("Chat"),
         leading: IconButton(
@@ -69,7 +69,7 @@ class _ChatScreenState extends State<ChatScreen> {
               ),
               Container(
                   decoration: BoxDecoration(
-                      color: AppColor.white,
+                      color: AppColors.white,
                       borderRadius: BorderRadius.circular(50)),
                   child: Row(
                     children: [
@@ -89,7 +89,7 @@ class _ChatScreenState extends State<ChatScreen> {
                         ),
                       ),
                       IconButton(
-                          color: AppColor.blue,
+                          color: AppColors.blue,
                           onPressed: () {
                             if (hasText()) {
                               _contoller.addMessage(

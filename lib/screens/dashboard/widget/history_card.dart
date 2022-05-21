@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getx_setup/theme/colors.dart';
+import 'package:expense_tracker/theme/app_colors.dart';
 
 class History extends StatelessWidget {
   final int index;
@@ -11,7 +11,7 @@ class History extends StatelessWidget {
     return Container(
       margin: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
       decoration: BoxDecoration(
-          color: AppColor.white, borderRadius: BorderRadius.circular(10)),
+          color: AppColors.white, borderRadius: BorderRadius.circular(10)),
       height: 100,
       child: Row(
         children: [
@@ -33,7 +33,7 @@ class History extends StatelessWidget {
                     style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
-                        color: AppColor.grey),
+                        color: AppColors.grey),
                   )),
             ],
           )
