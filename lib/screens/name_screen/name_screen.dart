@@ -8,7 +8,6 @@ class NameScreen extends StatelessWidget {
     TextEditingController textController = TextEditingController();
 
     return Scaffold(
-        backgroundColor: AppColors.backgroundColor,
         appBar: AppBar(
           title: Text("User Name"),
         ),

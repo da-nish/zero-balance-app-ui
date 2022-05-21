@@ -26,6 +26,8 @@ flutter:
     - assets/
     - assets/json/
     - assets/animation/
+    - assets/images/png/
+    - assets/images/svg/
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -39,17 +41,16 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #   - family: Urbanist
-  #     fonts:        
-  #       - asset: fonts/Urbanist-VariableFont_wght.ttf
-  #       # - asset: fonts/Urbanist-Regular.ttf
-  #       # - asset: fonts/Urbanist-Medium.ttf
-  #       # - asset: fonts/Urbanist-SemiBold.ttf
-  #       # - asset: fonts/Urbanist-Bold.ttf
-  #       # - asset: fonts/Urbanist-ExtraBold.ttf
-  #       # - asset: fonts/Urbanist-Black.ttf
-  #         weight: 700
+  fonts:
+    - family: Urbanist
+      fonts:        
+        - asset: fonts/Urbanist-VariableFont_wght.ttf
+        # - asset: fonts/Urbanist-Regular.ttf
+        # - asset: fonts/Urbanist-Medium.ttf
+        # - asset: fonts/Urbanist-SemiBold.ttf
+        # - asset: fonts/Urbanist-Bold.ttf
+        # - asset: fonts/Urbanist-ExtraBold.ttf
+        # - asset: fonts/Urbanist-Black.ttf
   #         style: italic
   #   - family: Trajan Pro
   #     fonts:

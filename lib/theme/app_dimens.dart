@@ -14,7 +14,7 @@ class Dimens {
   static const double textContainerRadius = 2;
   static const double raisedButtonHeight = 44;
   static const double raisedButtonHeightSubHeading = 60;
-  static const double textFieldHeight = 52;
+  static const double textFieldHeight = 32;
   static const double textFieldActionImageSize = 22;
   static const double miniButtonHeight = 26;
   static const double miniButtonWidth = 100;

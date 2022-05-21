@@ -101,8 +101,7 @@ class _CustomBottomSheetState extends State<CustomBottomSheet> {
               onTap: () {
                 listen();
               },
-              child: Lottie.asset(
-                  isListening ? LottieJson.mic : LottieJson.reload,
+              child: Lottie.asset(LottieJson.reload,
                   repeat: isListening,
                   width: 100,
                   height: 100,

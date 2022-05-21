@@ -8,7 +8,6 @@ class TopicListScreen extends StatelessWidget {
     // final apiService = Get.find<ApiService>();
 
     return Scaffold(
-      backgroundColor: AppColors.backgroundColor,
       appBar: AppBar(
         title: Text("Topic List"),
         leading: IconButton(
