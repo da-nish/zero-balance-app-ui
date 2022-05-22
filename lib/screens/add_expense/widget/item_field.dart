@@ -26,7 +26,11 @@ class ItemField extends StatelessWidget {
             title,
             style: AppTextStyle.h3Regular(color: AppColors.white),
           ),
-          Container(width: 120, alignment: Alignment.centerRight, child: field),
+          Container(
+              width: 120,
+              // color: Colors.red,
+              alignment: Alignment.centerRight,
+              child: field),
         ],
       ),
     );

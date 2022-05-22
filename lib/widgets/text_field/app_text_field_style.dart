@@ -37,7 +37,7 @@ class AppTextFieldStyle {
   })  : focusedBorderColor = AppColors.grey,
         cursorColor = AppColors.textPrimary,
         errorColor = AppColors.errorColor,
-        style = AppTextStyle.h4Regular(color: AppColors.textPrimary),
+        style = AppTextStyle.h3Bold(color: AppColors.textPrimary),
         hintStyle = AppTextStyle.h4Regular(color: AppColors.textPrimaryGrey),
         floatingHintStyle =
             AppTextStyle.h5Bold(color: AppColors.textPrimaryGrey),
@@ -54,8 +54,10 @@ class AppTextFieldStyle {
       this.childPadding = Dimens.paddingXS,
       this.floatingErrorIcon = "assets/ic_alert_text_icon_white.png",
       this.animationsDuration = Dimens.durationS,
-      this.style =
-          const TextStyle(fontSize: Dimens.h1, color: AppColors.textPrimary)})
+      this.style = const TextStyle(
+          fontSize: Dimens.h1,
+          fontWeight: FontWeight.w800,
+          color: AppColors.textPrimary)})
       : backgroundColor = AppColors.darkGrey,
         focusedBorderColor = AppColors.grey,
         cursorColor = AppColors.textPrimary,

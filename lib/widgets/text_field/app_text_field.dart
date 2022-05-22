@@ -12,7 +12,7 @@ class AppTextField extends StatefulWidget {
   final bool obscure;
   final int maxLines;
   final int? maxLetters;
-  final bool isCenterALign;
+  final bool isRightAlign;
   final TextInputType inputType;
   final FocusNode? focusNode;
 
@@ -22,7 +22,7 @@ class AppTextField extends StatefulWidget {
       this.labelText = "",
       this.maxLines = 1,
       this.startText = "",
-      this.isCenterALign = false,
+      this.isRightAlign = false,
       this.inputType = TextInputType.text,
       this.error,
       this.maxLetters,
@@ -93,7 +93,7 @@ class _AppTextFieldState extends State<AppTextField> {
           cursorColor: widget.style!.cursorColor,
           style: widget.style!.style,
           obscureText: widget.obscure,
-          textAlign: widget.isCenterALign ? TextAlign.center : TextAlign.left,
+          textAlign: widget.isRightAlign ? TextAlign.right : TextAlign.left,
           decoration: InputDecoration(
             prefixIcon: widget.child,
             counterText: "",
@@ -104,8 +104,7 @@ class _AppTextFieldState extends State<AppTextField> {
             errorBorder: InputBorder.none,
             disabledBorder: InputBorder.none,
             contentPadding: EdgeInsets.symmetric(
-                horizontal: widget.style!.contentHorizontalPadding,
-                vertical: widget.style!.contentVerticalPadding),
+                horizontal: 0, vertical: widget.style!.contentVerticalPadding),
             hintText:
                 widget.labelText.isEmpty ? widget.hintText : widget.labelText,
           ),

@@ -1,11 +1,13 @@
 import 'package:expense_tracker/screens/main/dashboard_controller.dart';
 import 'package:expense_tracker/screens/main/home/home_controller.dart';
+import 'package:expense_tracker/service/app_data.dart';
 import 'package:get/get.dart';
 
 class DashboardBinding extends Bindings {
   @override
   void dependencies() {
-    Get.put(HomeController());
-    Get.put(DashboardController());
+    Get.put(AppData(), permanent: true);
+    Get.put(HomeController(), permanent: true);
+    Get.put(DashboardController(), permanent: true);
   }
 }

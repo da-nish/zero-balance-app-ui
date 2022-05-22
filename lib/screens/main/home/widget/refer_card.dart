@@ -13,7 +13,7 @@ class ReferCard extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 15),
       width: screen.width * 0.8,
-      height: 180,
+      height: 170,
       padding: const EdgeInsets.all(15),
       decoration: BoxDecoration(
           color: AppColors.containerPink,
@@ -47,7 +47,7 @@ class ReferCard extends StatelessWidget {
               ),
               SizedBox(height: Dimens.grid20),
               Container(
-                width: 100,
+                width: 80,
                 child: ElevatedButton(
                   onPressed: () {},
                   child: Row(
@@ -59,7 +59,7 @@ class ReferCard extends StatelessWidget {
                   ),
                   style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all<Color>(
-                          AppColors.activeGreen),
+                          AppColors.referButton),
                       foregroundColor:
                           MaterialStateProperty.all<Color>(AppColors.dark)),
                 ),

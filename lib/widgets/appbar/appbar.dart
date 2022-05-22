@@ -17,7 +17,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
         children: [
           if (showBackButton)
             IconButton(
-                onPressed: () {},
+                onPressed: () => onTap.call(),
                 icon: Icon(
                   Icons.arrow_back,
                   color: AppColors.white,

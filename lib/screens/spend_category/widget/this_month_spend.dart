@@ -1,10 +1,7 @@
-import 'package:expense_tracker/screens/main/home/widget/category_small_card.dart';
 import 'package:expense_tracker/theme/app_decoration.dart';
 import 'package:expense_tracker/utils/string_extension.dart';
 import 'package:flutter/material.dart';
-import 'package:expense_tracker/screens/main/home/home_controller.dart';
 import 'package:expense_tracker/screens/spend_category/widget/bar_chart.dart';
-import 'package:expense_tracker/theme/app_assets.dart';
 import 'package:expense_tracker/theme/app_colors.dart';
 import 'package:expense_tracker/theme/app_text_style.dart';
 
@@ -40,9 +37,9 @@ class ThisMonthSpend extends StatelessWidget {
                 // CategoryCard(
                 //     CategoryModel("Food", AppColors.activeBlue, AppAssets.food),
                 //     size: 100),
-                CategorySmallCard(
-                  CategoryModel("Food", AppColors.activeBlue, AppAssets.food),
-                ),
+                // CategorySmallCard(
+                //   CategoryModel.model(CategoryType.Food),
+                // ),
                 SizedBox(width: 12),
 
                 Column(

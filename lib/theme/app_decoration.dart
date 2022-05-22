@@ -21,6 +21,8 @@ class AppBoxDecoration {
           border:
               Border(bottom: BorderSide(width: width, color: AppColors.dark)));
 
-  static BoxDecoration container() => BoxDecoration(
-      color: AppColors.containerColor, borderRadius: BorderRadius.circular(8));
+  static BoxDecoration container(
+          {Color containerColor = AppColors.containerColor}) =>
+      BoxDecoration(
+          color: containerColor, borderRadius: BorderRadius.circular(8));
 }

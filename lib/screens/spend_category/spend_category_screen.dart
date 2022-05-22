@@ -1,5 +1,3 @@
-import 'package:expense_tracker/screens/main/home/home_controller.dart';
-import 'package:expense_tracker/screens/main/home/widget/category_small_card.dart';
 import 'package:expense_tracker/screens/spend_category/widget/this_month_spend.dart';
 import 'package:expense_tracker/theme/app_assets.dart';
 import 'package:expense_tracker/theme/app_colors.dart';
@@ -155,9 +153,9 @@ class SpendCategoryScreen extends StatelessWidget {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          CategorySmallCard(
-            CategoryModel("Food", AppColors.activeBlue, AppAssets.food),
-          ),
+          // CategorySmallCard(
+          //   CategoryModel.model(CategoryType.Food),
+          // ),
           SizedBox(width: 10),
           Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,

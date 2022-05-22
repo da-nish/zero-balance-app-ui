@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
             page: () => DashboardScreen(),
             binding: DashboardBinding()),
         GetPage(
-            name: "/home", page: () => HomeScreen(""), binding: HomeBinding()),
+            name: "/home", page: () => HomeScreen(), binding: HomeBinding()),
         GetPage(
             name: "/add-expense",
             page: () => AddExpenseScreen(),

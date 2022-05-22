@@ -29,7 +29,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
         context,
         controller: _controller,
         screens: [
-          _wrapPage(HomeScreen("")),
+          _wrapPage(HomeScreen()),
           _wrapPage(PlanningScreen()),
           _wrapPage(SpendCategoryScreen()),
           _wrapPage(Container()),

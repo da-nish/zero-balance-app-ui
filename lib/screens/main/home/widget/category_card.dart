@@ -1,4 +1,4 @@
-import 'package:expense_tracker/screens/main/home/home_controller.dart';
+import 'package:expense_tracker/screens/main/dashboard_controller.dart';
 import 'package:expense_tracker/theme/app_colors.dart';
 import 'package:expense_tracker/theme/app_dimens.dart';
 import 'package:flutter/material.dart';
@@ -12,8 +12,9 @@ class CategoryCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print("perece ${item.percentage}");
     return Container(
-        width: size,
+        width: size + 2,
         height: size + 20,
         margin: const EdgeInsets.only(right: 20),
         child: Column(
@@ -21,17 +22,21 @@ class CategoryCard extends StatelessWidget {
             CircularPercentIndicator(
                 radius: 42,
                 lineWidth: 1.5,
-                percent: 0.5,
+                percent: item.percentage,
+                reverse: true,
                 center: CircleAvatar(
                   backgroundColor: item.color,
                   radius: 35.0,
                   child: ClipRRect(
-                    child: SvgPicture.asset(item.icon),
+                    child: SvgPicture.asset(
+                      item.icon,
+                      color: AppColors.white,
+                    ),
                     borderRadius: BorderRadius.circular(0),
                   ),
                 ),
-                backgroundColor: item.color,
-                progressColor: AppColors.dark),
+                backgroundColor: AppColors.grey,
+                progressColor: item.color),
             SizedBox(height: Dimens.grid10),
             Text(
               item.name,

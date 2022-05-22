@@ -1,4 +1,4 @@
-import 'package:expense_tracker/screens/main/home/home_controller.dart';
+import 'package:expense_tracker/screens/main/dashboard_controller.dart';
 import 'package:expense_tracker/theme/app_colors.dart';
 import 'package:expense_tracker/theme/app_dimens.dart';
 import 'package:expense_tracker/theme/app_text_style.dart';
@@ -14,19 +14,15 @@ class OfferCard extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.only(right: 15),
       width: screen.width * 0.6,
-      height: 140,
-      padding: const EdgeInsets.all(15),
+      padding: const EdgeInsets.all(18),
       decoration: BoxDecoration(
           color: AppColors.containerColorWhite,
           borderRadius: BorderRadius.circular(15)),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Container(
-              child: Image.asset(item.image),
-            ),
+          Container(
+            child: Image.asset(item.image),
           ),
           SizedBox(height: Dimens.grid20),
           Text(
