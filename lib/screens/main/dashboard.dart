@@ -24,7 +24,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
     final controller = Get.find<DashboardController>();
     controller.setName(Get.arguments);
     return Scaffold(
-      backgroundColor: AppColors.dark,
+      backgroundColor: AppColors.appBackground,
       body: PersistentTabView(
         context,
         controller: _controller,
@@ -40,17 +40,15 @@ class _DashboardScreenState extends State<DashboardScreen> {
           _item(AppAssets.nagivationTab3),
           _item(AppAssets.nagivationTab4),
         ],
-        confineInSafeArea: true,
-        backgroundColor: AppColors.darkGrey,
+        confineInSafeArea: false,
+        backgroundColor: AppColors.white,
         handleAndroidBackButtonPress: true,
         resizeToAvoidBottomInset: true,
         stateManagement: true,
         hideNavigationBarWhenKeyboardShows: true,
         decoration: NavBarDecoration(
-          borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(Dimens.grid16),
-              topRight: Radius.circular(Dimens.grid16)),
-          colorBehindNavBar: Colors.white,
+          borderRadius: BorderRadius.all(Radius.circular(Dimens.grid8)),
+          colorBehindNavBar: AppColors.appBackground,
         ),
         popAllScreensOnTapOfSelectedTab: true,
         popActionScreens: PopActionScreensType.all,
@@ -64,17 +62,19 @@ class _DashboardScreenState extends State<DashboardScreen> {
           duration: Dimens.durationXS,
         ),
         navBarStyle: NavBarStyle.style2,
-        bottomScreenMargin: 0,
+        bottomScreenMargin: 50,
+        margin: EdgeInsets.all(20),
         padding: NavBarPadding.all(5),
       ),
     );
   }
 
   PersistentBottomNavBarItem _item(String asset) => PersistentBottomNavBarItem(
-      activeColorPrimary: AppColors.activeBlue,
+      activeColorPrimary: AppColors.black,
+      activeColorSecondary: AppColors.activeGreen,
       inactiveColorPrimary: AppColors.textPrimary,
-      icon: SvgPicture.asset(asset, color: AppColors.activeBlue),
-      inactiveIcon: SvgPicture.asset(asset, color: AppColors.textPrimary));
+      icon: SvgPicture.asset(asset, color: AppColors.dark),
+      inactiveIcon: SvgPicture.asset(asset, color: AppColors.grey));
 
   Widget _wrapPage(Widget child) => child;
 }

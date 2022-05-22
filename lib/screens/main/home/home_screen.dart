@@ -78,7 +78,8 @@ class HomeScreen extends StatelessWidget {
                           .toList()),
                 ),
                 SizedBox(height: 10),
-                ReferCard()
+                ReferCard(),
+                SizedBox(height: 30),
               ],
             ),
           ),
