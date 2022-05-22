@@ -7,39 +7,37 @@ import 'package:percent_indicator/circular_percent_indicator.dart';
 
 class CategoryCard extends StatelessWidget {
   final CategoryModel item;
-  const CategoryCard(this.item, {Key? key}) : super(key: key);
+  final double size;
+  const CategoryCard(this.item, {this.size = 100});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(right: 15),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Container(
-              width: 100,
-              padding: const EdgeInsets.all(15.0),
-              child: CircularPercentIndicator(
-                  radius: 44.0,
-                  lineWidth: 1.5,
-                  percent: 0.5,
-                  center: Container(
-                    padding: const EdgeInsets.all(10),
-                    decoration: BoxDecoration(
-                        color: item.color,
-                        borderRadius: BorderRadius.circular(50)),
-                    alignment: Alignment.center,
-                    child: SvgPicture.asset(item.icon),
-                  ),
+        width: size,
+        height: size + 20,
+        margin: const EdgeInsets.only(right: 20),
+        child: Column(
+          children: [
+            CircularPercentIndicator(
+                radius: 42,
+                lineWidth: 1.5,
+                percent: 0.5,
+                center: CircleAvatar(
                   backgroundColor: item.color,
-                  progressColor: AppColors.dark)),
-          SizedBox(height: Dimens.grid20),
-          Text(
-            item.name,
-            textAlign: TextAlign.center,
-          )
-        ],
-      ),
-    );
+                  radius: 35.0,
+                  child: ClipRRect(
+                    child: SvgPicture.asset(item.icon),
+                    borderRadius: BorderRadius.circular(0),
+                  ),
+                ),
+                backgroundColor: item.color,
+                progressColor: AppColors.dark),
+            SizedBox(height: Dimens.grid10),
+            Text(
+              item.name,
+              textAlign: TextAlign.center,
+            )
+          ],
+        ));
   }
 }

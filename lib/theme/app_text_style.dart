@@ -1,11 +1,11 @@
 import 'package:expense_tracker/theme/app_dimens.dart';
 import 'package:flutter/material.dart';
 
-mixin Font {
+class Font {
   static const urbanist = "Urbanist";
 }
 
-mixin AppTextStyle {
+class AppTextStyle {
 //bold
   static TextStyle h1Bold(
           {Color? color,

@@ -53,14 +53,6 @@ class Dimens {
   static const double paddingXL = 32;
   static const double paddingXXL = 36;
 
-  // Opacity
-  static const double opacityNull = 0.0;
-  static const double opacityXS = 0.2;
-  static const double opacityS = 0.4;
-  static const double opacityM = 0.6;
-  static const double opacityL = 0.8;
-  static const double opacityFull = 1.0;
-
   // Animation Durations
   static const Duration durationXS = Duration(milliseconds: 150);
   static const Duration durationS = Duration(milliseconds: 300);

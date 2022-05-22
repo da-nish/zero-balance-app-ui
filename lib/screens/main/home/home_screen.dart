@@ -56,7 +56,8 @@ class HomeScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [Text("data"), Text("manage")]),
                 Container(
-                  height: 200,
+                  height: 140,
+                  width: 140,
                   child: ListView(
                       scrollDirection: Axis.horizontal,
                       children: homeController.items

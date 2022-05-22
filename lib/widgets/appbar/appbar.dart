@@ -4,8 +4,9 @@ import 'package:flutter/material.dart';
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final onTap;
   final bool showBackButton;
+  final String title;
 
-  CustomAppBar({this.onTap, this.showBackButton = false});
+  CustomAppBar(this.title, {this.onTap, this.showBackButton = false});
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +22,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                   Icons.arrow_back,
                   color: AppColors.white,
                 )),
-          Text("Add expense"),
+          Text(title),
         ],
       ),
       // centerTitle: true,

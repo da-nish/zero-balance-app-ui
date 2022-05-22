@@ -7,6 +7,14 @@ class AppColors {
   static const Color transparent = Colors.transparent;
   static const Color containerColorWhite = Color(0xFFF8F8F8);
   static const Color containerPink = Color(0xFFCC5FFB);
+  static const Color button = Color(0xFF3A3A3B);
+  static const Color buttonText = Color(0xFF777778);
+  static const Color imageCard = Color(0xFF3A3A3B);
+  static const Color alert = Color(0xFFFF8582);
+  static const Color success = Color(0xFF83FFC5);
+
+  static const Color selectedButton = Color(0xFF777778);
+  static const Color selectedButtonText = Color(0xFFFFFFFF);
 
   static const Color dark = Color(0xFF17171a);
   static const Color darkGreyInactive = Color(0xFF1d1d23);

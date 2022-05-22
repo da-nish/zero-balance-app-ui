@@ -18,7 +18,7 @@ class AddExpenseScreen extends StatelessWidget {
     final homeController = Get.find<AddExpenseController>();
     // homeController.setName(Get.arguments);
     return Scaffold(
-      appBar: CustomAppBar(),
+      appBar: CustomAppBar("Add expense"),
       body: Container(
         width: double.infinity,
         child: Padding(

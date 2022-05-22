@@ -1,3 +1,4 @@
+import 'package:expense_tracker/screens/main/dashboard_controller.dart';
 import 'package:expense_tracker/screens/main/home/home_screen.dart';
 import 'package:expense_tracker/screens/main/planning/planning_screen.dart';
 import 'package:expense_tracker/screens/spend_category/spend_category_screen.dart';
@@ -6,6 +7,7 @@ import 'package:expense_tracker/theme/app_colors.dart';
 import 'package:expense_tracker/theme/app_dimens.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
 import 'package:persistent_bottom_nav_bar/persistent-tab-view.dart';
 
 class DashboardScreen extends StatefulWidget {
@@ -19,6 +21,8 @@ class _DashboardScreenState extends State<DashboardScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.find<DashboardController>();
+    controller.setName(Get.arguments);
     return Scaffold(
       backgroundColor: AppColors.dark,
       body: PersistentTabView(
