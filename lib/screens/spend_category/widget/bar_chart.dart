@@ -2,24 +2,25 @@ import 'package:charts_flutter/flutter.dart' as charts;
 import 'package:flutter/material.dart';
 
 class CustomRoundedBars extends StatelessWidget {
-  final List<charts.Series> seriesList;
+  final List<Spends> data;
   final bool animate;
 
-  CustomRoundedBars(this.seriesList, {this.animate = true});
+  CustomRoundedBars(this.data, {this.animate = true});
 
-  /// Creates a [BarChart] with custom rounded bars.
-  factory CustomRoundedBars.withSampleData() {
-    return new CustomRoundedBars(
-      _createSampleData(),
-      // Disable animations for image tests.
-      animate: false,
-    );
-  }
+  // /// Creates a [BarChart] with custom rounded bars.
+  // factory CustomRoundedBars.withSampleData() {
+  //   return CustomRoundedBars(
+  //     _createSampleData(data),
+  //     // Disable animations for image tests.
+  //     animate: true,
+  //   );
+  // }
 
   @override
   Widget build(BuildContext context) {
-    return new charts.BarChart(
-      _createSampleData(),
+    print("sd>>> ${data.length}");
+    return charts.BarChart(
+      _createSampleData(data),
       animate: animate,
       defaultRenderer: new charts.BarRendererConfig(
           // By default, bar renderer will draw rounded bars with a constant
@@ -31,30 +32,23 @@ class CustomRoundedBars extends StatelessWidget {
   }
 
   /// Create one series with sample hard coded data.
-  static List<charts.Series<OrdinalSales, String>> _createSampleData() {
-    final data = [
-      new OrdinalSales('2014', 5),
-      new OrdinalSales('2015', 25),
-      new OrdinalSales('2016', 100),
-      new OrdinalSales('2017', 75),
-    ];
-
+  static List<charts.Series<Spends, String>> _createSampleData(
+      List<Spends> data) {
     return [
-      new charts.Series<OrdinalSales, String>(
-        id: 'Sales',
+      new charts.Series<Spends, String>(
+        id: 'Spends',
         colorFn: (_, __) => charts.MaterialPalette.blue.shadeDefault,
-        domainFn: (OrdinalSales sales, _) => sales.year,
-        measureFn: (OrdinalSales sales, _) => sales.sales,
+        domainFn: (Spends sales, _) => sales.date,
+        measureFn: (Spends sales, _) => sales.amount,
         data: data,
       )
     ];
   }
 }
 
-/// Sample ordinal data type.
-class OrdinalSales {
-  final String year;
-  final int sales;
+class Spends {
+  final String date;
+  final int amount;
 
-  OrdinalSales(this.year, this.sales);
+  Spends(this.date, this.amount);
 }

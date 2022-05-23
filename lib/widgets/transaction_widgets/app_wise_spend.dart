@@ -19,7 +19,7 @@ class AppWiseSpend extends StatelessWidget {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          MerchantCard(AppAssets.swiggyColored, colorCard: true),
+          MerchantCard(transaction.image, colorCard: true),
           SizedBox(width: 10),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,

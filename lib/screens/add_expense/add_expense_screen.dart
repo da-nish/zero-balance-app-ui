@@ -112,15 +112,15 @@ class _AddExpenseScreenState extends State<AddExpenseScreen> {
                     style: AppTextStyle.h4Medium(color: AppColors.white),
                   ),
                   value: controller.marchant,
-                  items: controller.marchentList.map((String items) {
+                  items: controller.marchentList.map((Pair items) {
                     return DropdownMenuItem(
                       value: items,
-                      child: Text(items),
+                      child: Text(items.first),
                     );
                   }).toList(),
-                  onChanged: (String? newValue) {
+                  onChanged: (newValue) {
                     setState(() {
-                      controller.marchant = newValue!;
+                      controller.marchant = newValue! as Pair<String, String>;
                     });
                   },
                 ),

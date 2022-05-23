@@ -10,7 +10,6 @@ class AppData {
   List<CategorySpendModel> _transactions = [];
 
   List<CategorySpendModel> recentTransactions() {
-    // return _transactions;
     List<CategorySpendModel> recentList = [];
     int i = 0;
     for (CategorySpendModel item in _transactions) {

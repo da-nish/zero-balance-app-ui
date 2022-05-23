@@ -22,7 +22,7 @@ class RecentTransaction extends StatelessWidget {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          MerchantCard(AppAssets.amazon),
+          MerchantCard(transaction.image),
           SizedBox(width: 10),
           Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,

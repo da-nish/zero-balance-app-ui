@@ -31,7 +31,7 @@ class SpendCategoryScreen extends StatelessWidget {
           child: ListView(
             children: [
               SizedBox(height: 10),
-              ThisMonthSpend(item),
+              ThisMonthSpend(item, controller),
               SizedBox(height: 30),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -60,15 +60,18 @@ class SpendCategoryScreen extends StatelessWidget {
               ),
               SizedBox(height: 10),
               Text(
-                "View all",
+                controller.transactionList.isEmpty
+                    ? "No transaction found"
+                    : "View all",
                 style: AppTextStyle.h4Medium(color: AppColors.textGrey),
                 textAlign: TextAlign.center,
               ),
               SizedBox(height: 20),
-              Text(
-                "Recent Transactions",
-                style: AppTextStyle.h3Medium(color: AppColors.white),
-              ),
+              if (controller.transactionList.isNotEmpty)
+                Text(
+                  "Recent Transactions",
+                  style: AppTextStyle.h3Medium(color: AppColors.white),
+                ),
               SizedBox(height: 10),
               Container(
                 decoration: AppBoxDecoration.container(),

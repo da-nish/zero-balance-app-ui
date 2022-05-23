@@ -1,3 +1,4 @@
+import 'package:expense_tracker/theme/app_colors.dart';
 import 'package:expense_tracker/theme/app_decoration.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -10,6 +11,7 @@ class MerchantCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Color color = colorCard ? AppColors.blue : AppColors.white;
     return Container(
       width: 40,
       height: 40,
@@ -17,7 +19,10 @@ class MerchantCard extends StatelessWidget {
       decoration: colorCard
           ? AppBoxDecoration.coloredImageCard()
           : AppBoxDecoration.imageCard(),
-      child: SvgPicture.asset(image),
+      child: SvgPicture.asset(
+        image,
+        color: color,
+      ),
     );
   }
 }

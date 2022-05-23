@@ -35,6 +35,7 @@ class NameScreen extends StatelessWidget {
               children: [
                 SizedBox(width: 6),
                 Icon(Icons.account_circle_rounded),
+                SizedBox(width: 6),
                 Expanded(
                   child: AppTextField(
                     startText: "",
