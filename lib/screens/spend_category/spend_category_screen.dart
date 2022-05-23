@@ -1,8 +1,6 @@
 import 'package:expense_tracker/models/category_model.dart';
 import 'package:expense_tracker/routes/get_pages.dart';
 import 'package:expense_tracker/theme/app_dimens.dart';
-import 'package:expense_tracker/widgets/transaction_widgets/app_wise_spend.dart';
-import 'package:expense_tracker/widgets/transaction_widgets/recent_transactions.dart';
 import 'package:expense_tracker/screens/spend_category/spend_category_controller.dart';
 import 'package:expense_tracker/screens/spend_category/widget/this_month_spend.dart';
 import 'package:expense_tracker/theme/app_assets.dart';
@@ -11,6 +9,8 @@ import 'package:expense_tracker/theme/app_decoration.dart';
 import 'package:expense_tracker/theme/app_text_style.dart';
 import 'package:expense_tracker/widgets/add_button/add_button.dart';
 import 'package:expense_tracker/widgets/appbar/appbar.dart';
+import 'package:expense_tracker/widgets/transaction/app_wise_spend.dart';
+import 'package:expense_tracker/widgets/transaction/recent_transactions.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';

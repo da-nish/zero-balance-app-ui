@@ -1,4 +1,5 @@
-import 'package:expense_tracker/screens/main/dashboard_controller.dart';
+import 'package:expense_tracker/screens/main/dashboard/dashboard_controller.dart';
+
 import 'package:expense_tracker/screens/main/home/home_controller.dart';
 import 'package:expense_tracker/screens/main/planning/planning_controller.dart';
 import 'package:expense_tracker/service/app_data.dart';

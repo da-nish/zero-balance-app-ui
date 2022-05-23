@@ -1,5 +1,6 @@
 import 'package:expense_tracker/routes/get_pages.dart';
-import 'package:expense_tracker/screens/main/dashboard_controller.dart';
+import 'package:expense_tracker/screens/main/dashboard/dashboard_controller.dart';
+
 import 'package:expense_tracker/screens/main/home/home_controller.dart';
 import 'package:expense_tracker/screens/main/home/widget/category_card.dart';
 import 'package:expense_tracker/screens/main/home/widget/offer_card.dart';

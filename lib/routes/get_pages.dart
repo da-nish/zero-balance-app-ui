@@ -1,7 +1,7 @@
 import 'package:expense_tracker/screens/add_expense/add_expense_binding.dart';
 import 'package:expense_tracker/screens/add_expense/add_expense_screen.dart';
-import 'package:expense_tracker/screens/main/dashboard_screen.dart';
-import 'package:expense_tracker/screens/main/dashboard_binding.dart';
+import 'package:expense_tracker/screens/main/dashboard/dashboard_binding.dart';
+import 'package:expense_tracker/screens/main/dashboard/dashboard_screen.dart';
 import 'package:expense_tracker/screens/main/home/home_binding.dart';
 import 'package:expense_tracker/screens/main/home/home_screen.dart';
 import 'package:expense_tracker/screens/main/planning/planning_binding.dart';
