@@ -18,7 +18,6 @@ class CustomRoundedBars extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print("sd>>> ${data.length}");
     return charts.BarChart(
       _createSampleData(data),
       animate: animate,

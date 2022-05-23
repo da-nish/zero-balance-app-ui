@@ -59,8 +59,8 @@ class AppTheme {
     colorScheme: ColorScheme.dark(
       primary: AppColors.textPrimary,
       primaryContainer: AppColors.textPrimary,
-      secondary: AppColors.textPrimary,
-      onPrimary: AppColors.textPrimary,
+      secondary: AppColors.dark,
+      onPrimary: AppColors.dark,
       background: AppColors.textPrimary,
     ),
     // colorScheme:

@@ -22,9 +22,7 @@ class SpendCategoryController extends GetxController {
     int days = 7;
     DateTime from = now.subtract(Duration(days: days));
     for (CategorySpendModel item in transactionList) {
-      print("from:: ${from.toString()} item:: ${item.date.toString()}");
       if (from.isBefore(item.date)) {
-        print(item.date.toString());
         chartData.add(Spends(item.date.dateFormat().toString(), item.amount));
       }
     }
@@ -43,9 +41,7 @@ class SpendCategoryController extends GetxController {
     DateTime from = now.subtract(Duration(days: days));
     chartData.clear();
     for (CategorySpendModel item in transactionList) {
-      print("from:: ${from.toString()} item:: ${item.date.toString()}");
       if (from.isBefore(item.date)) {
-        print(item.date.toString());
         chartData.add(Spends(item.date.dateFormat().toString(), item.amount));
       }
     }

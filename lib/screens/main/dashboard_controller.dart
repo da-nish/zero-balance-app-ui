@@ -6,6 +6,5 @@ class DashboardController extends GetxController {
   void setName(String? name) {
     if (name == null) return;
     username = name;
-    print("username: $name");
   }
 }
