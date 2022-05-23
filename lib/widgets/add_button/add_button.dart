@@ -1,13 +1,12 @@
-import 'package:expense_tracker/screens/add_expense/add_expense_screen.dart';
 import 'package:expense_tracker/theme/app_assets.dart';
 import 'package:expense_tracker/theme/app_colors.dart';
 import 'package:expense_tracker/theme/app_text_style.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:get/get.dart';
 
 class AddButton extends StatelessWidget {
-  const AddButton({Key? key}) : super(key: key);
+  final Function onPressed;
+  const AddButton(this.onPressed, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -20,10 +19,9 @@ class AddButton extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           SvgPicture.asset(AppAssets.plus),
+          SizedBox(width: 4),
           InkWell(
-            onTap: () {
-              Get.toNamed("/add-expense");
-            },
+            onTap: () => onPressed.call(),
             child: Text("Add expense",
                 style: AppTextStyle.h4Bold(color: AppColors.white)),
           )

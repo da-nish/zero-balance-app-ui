@@ -1,7 +1,7 @@
 import 'package:expense_tracker/screens/main/dashboard_controller.dart';
-import 'package:expense_tracker/screens/main/home/widget/category_card.dart';
 import 'package:expense_tracker/screens/main/home/widget/category_small_card.dart';
 import 'package:expense_tracker/theme/app_decoration.dart';
+import 'package:expense_tracker/utils/functions.dart';
 import 'package:expense_tracker/utils/string_extension.dart';
 import 'package:flutter/material.dart';
 import 'package:expense_tracker/screens/spend_category/widget/bar_chart.dart';
@@ -38,7 +38,14 @@ class ThisMonthSpend extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                CategorySmallCard(item),
+                Column(
+                  children: [
+                    CategorySmallCard(item),
+                    Text(getTitle(item.type),
+                        style: AppTextStyle.h4Regular(
+                            color: AppColors.buttonText)),
+                  ],
+                ),
                 SizedBox(width: 12),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,

@@ -1,7 +1,6 @@
 import 'package:expense_tracker/screens/main/dashboard_controller.dart';
 import 'package:expense_tracker/service/app_data.dart';
 import 'package:expense_tracker/theme/app_assets.dart';
-import 'package:expense_tracker/theme/app_colors.dart';
 import 'package:expense_tracker/utils/functions.dart';
 import 'package:get/get.dart';
 

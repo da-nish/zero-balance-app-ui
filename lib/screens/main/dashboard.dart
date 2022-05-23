@@ -1,7 +1,6 @@
 import 'package:expense_tracker/screens/main/dashboard_controller.dart';
 import 'package:expense_tracker/screens/main/home/home_screen.dart';
 import 'package:expense_tracker/screens/main/planning/planning_screen.dart';
-import 'package:expense_tracker/screens/spend_category/spend_category_screen.dart';
 import 'package:expense_tracker/theme/app_assets.dart';
 import 'package:expense_tracker/theme/app_colors.dart';
 import 'package:expense_tracker/theme/app_dimens.dart';

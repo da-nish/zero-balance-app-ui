@@ -1,12 +1,11 @@
 import 'package:expense_tracker/screens/main/dashboard_controller.dart';
 import 'package:expense_tracker/screens/main/home/home_controller.dart';
-import 'package:expense_tracker/screens/main/home/widget/add_button.dart';
 import 'package:expense_tracker/screens/main/home/widget/category_card.dart';
 import 'package:expense_tracker/screens/main/home/widget/offer_card.dart';
 import 'package:expense_tracker/screens/main/home/widget/refer_card.dart';
-import 'package:expense_tracker/service/app_data.dart';
 import 'package:expense_tracker/theme/app_dimens.dart';
 import 'package:expense_tracker/theme/app_text_style.dart';
+import 'package:expense_tracker/widgets/add_button/add_button.dart';
 import 'package:expense_tracker/widgets/appbar/main_appbar.dart';
 import 'package:expense_tracker/widgets/slider/slider.dart';
 import 'package:flutter/material.dart';
@@ -41,7 +40,9 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ),
                     // Expanded(child: Container()),
-                    AddButton()
+                    AddButton(() {
+                      Get.toNamed("/add-expense");
+                    }),
                   ],
                 ),
                 SizedBox(height: 10),
