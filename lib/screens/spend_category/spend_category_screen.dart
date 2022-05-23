@@ -1,4 +1,5 @@
 import 'package:expense_tracker/models/category_model.dart';
+import 'package:expense_tracker/routes/get_pages.dart';
 import 'package:expense_tracker/theme/app_dimens.dart';
 import 'package:expense_tracker/widgets/transaction_widgets/app_wise_spend.dart';
 import 'package:expense_tracker/widgets/transaction_widgets/recent_transactions.dart';
@@ -48,7 +49,7 @@ class SpendCategoryScreen extends StatelessWidget {
                   ),
                   Expanded(child: Container()),
                   AddButton(() {
-                    Get.toNamed("/add-expense");
+                    Get.toNamed(GetPages.addExpense);
                   }),
                 ],
               ),

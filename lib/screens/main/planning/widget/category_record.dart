@@ -1,4 +1,5 @@
 import 'package:expense_tracker/models/category_model.dart';
+import 'package:expense_tracker/routes/get_pages.dart';
 import 'package:expense_tracker/screens/main/home/widget/category_small_card.dart';
 import 'package:expense_tracker/screens/main/planning/planning_controller.dart';
 import 'package:expense_tracker/theme/app_assets.dart';
@@ -19,7 +20,7 @@ class CategoryRow extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        Get.toNamed("/spend-category", arguments: item);
+        Get.toNamed(GetPages.spendCategory, arguments: item);
       },
       child: Container(
         height: 95,

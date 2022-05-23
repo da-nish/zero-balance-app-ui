@@ -1,4 +1,5 @@
 import 'package:expense_tracker/models/category_model.dart';
+import 'package:expense_tracker/routes/get_pages.dart';
 import 'package:expense_tracker/theme/app_colors.dart';
 import 'package:expense_tracker/theme/app_dimens.dart';
 import 'package:flutter/material.dart';
@@ -15,7 +16,7 @@ class CategoryCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        Get.toNamed("/spend-category", arguments: item);
+        Get.toNamed(GetPages.spendCategory, arguments: item);
       },
       child: Container(
           width: size + 2,

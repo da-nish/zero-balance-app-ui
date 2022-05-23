@@ -1,3 +1,4 @@
+import 'package:expense_tracker/routes/get_pages.dart';
 import 'package:expense_tracker/screens/main/dashboard_controller.dart';
 import 'package:expense_tracker/screens/main/home/home_controller.dart';
 import 'package:expense_tracker/screens/main/home/widget/category_card.dart';
@@ -41,7 +42,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                     // Expanded(child: Container()),
                     AddButton(() {
-                      Get.toNamed("/add-expense");
+                      Get.toNamed(GetPages.addExpense);
                     }),
                   ],
                 ),
