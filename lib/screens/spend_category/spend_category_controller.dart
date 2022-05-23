@@ -1,4 +1,5 @@
-import 'package:expense_tracker/models/model.dart';
+import 'package:expense_tracker/models/category_spend_model.dart';
+import 'package:expense_tracker/models/enums.dart';
 import 'package:expense_tracker/screens/spend_category/widget/bar_chart.dart';
 import 'package:expense_tracker/service/app_data.dart';
 import 'package:expense_tracker/utils/datetime_extension.dart';

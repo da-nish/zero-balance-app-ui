@@ -1,4 +1,4 @@
-import 'package:expense_tracker/models/model.dart';
+import 'package:expense_tracker/models/category_model.dart';
 import 'package:expense_tracker/widgets/transaction_widgets/app_wise_spend.dart';
 import 'package:expense_tracker/widgets/transaction_widgets/recent_transactions.dart';
 import 'package:expense_tracker/screens/spend_category/spend_category_controller.dart';

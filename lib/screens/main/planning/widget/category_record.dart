@@ -1,4 +1,4 @@
-import 'package:expense_tracker/models/model.dart';
+import 'package:expense_tracker/models/category_model.dart';
 import 'package:expense_tracker/screens/main/home/widget/category_small_card.dart';
 import 'package:expense_tracker/screens/main/planning/planning_controller.dart';
 import 'package:expense_tracker/theme/app_assets.dart';

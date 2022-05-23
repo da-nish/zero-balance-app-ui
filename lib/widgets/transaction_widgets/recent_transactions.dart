@@ -1,5 +1,4 @@
-import 'package:expense_tracker/models/model.dart';
-import 'package:expense_tracker/theme/app_assets.dart';
+import 'package:expense_tracker/models/category_spend_model.dart';
 import 'package:expense_tracker/theme/app_colors.dart';
 import 'package:expense_tracker/theme/app_decoration.dart';
 import 'package:expense_tracker/theme/app_text_style.dart';

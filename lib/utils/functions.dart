@@ -1,4 +1,5 @@
-import 'package:expense_tracker/models/model.dart';
+import 'package:expense_tracker/models/category_model.dart';
+import 'package:expense_tracker/models/enums.dart';
 import 'package:expense_tracker/theme/app_assets.dart';
 import 'package:expense_tracker/theme/app_colors.dart';
 

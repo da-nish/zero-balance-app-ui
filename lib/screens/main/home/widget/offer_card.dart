@@ -1,4 +1,4 @@
-import 'package:expense_tracker/models/model.dart';
+import 'package:expense_tracker/models/offer_model.dart';
 import 'package:expense_tracker/theme/app_colors.dart';
 import 'package:expense_tracker/theme/app_dimens.dart';
 import 'package:expense_tracker/theme/app_text_style.dart';
