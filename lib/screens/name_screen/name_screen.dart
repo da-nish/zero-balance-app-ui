@@ -14,13 +14,14 @@ class NameScreen extends StatelessWidget {
     final controller = Get.find<NameController>();
     return Scaffold(
         body: Container(
+      padding: EdgeInsets.symmetric(horizontal: Dimens.grid16),
       width: double.infinity,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          SizedBox(height: Dimens.grid120),
           Text(
-            "Please type your name",
+            "Please type your \nname",
             style: TextStyle(
                 fontSize: Dimens.grid40,
                 fontWeight: FontWeight.bold,
@@ -42,7 +43,7 @@ class NameScreen extends StatelessWidget {
                   child: AppTextField(
                     startText: "",
                     maxLines: 1,
-                    inputType: TextInputType.number,
+                    inputType: TextInputType.name,
                     style: AppTextFieldStyle.fromTheme(AppTheme.defaultTheme),
                     labelText: "Name",
                     onChanged: (value) {

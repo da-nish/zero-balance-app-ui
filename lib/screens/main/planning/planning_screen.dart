@@ -19,9 +19,9 @@ class PlanningScreen extends StatelessWidget {
     controller.init();
     return Scaffold(
       appBar: CustomAppBar("Planning"),
-      body: Padding(
+      body: Container(
         padding: const EdgeInsets.symmetric(
-            horizontal: Dimens.grid10, vertical: Dimens.grid8),
+            horizontal: Dimens.grid16, vertical: Dimens.grid8),
         child: ListView(
           children: [
             SizedBox(height: Dimens.grid10),
