@@ -27,8 +27,6 @@ flutter:
   uses-material-design: true
   assets:
     - assets/
-    - assets/json/
-    - assets/animation/
     - assets/images/png/
     - assets/images/svg/
     - assets/images/bottom_navigation/

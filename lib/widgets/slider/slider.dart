@@ -21,12 +21,13 @@ class _SliderCardState extends State<SliderCard> {
     percentage = percentage > 1 ? 1 : percentage;
     percentage = percentage < 0.1 ? 0.04 : percentage;
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 18),
-      margin: const EdgeInsets.symmetric(vertical: 18),
+      padding: const EdgeInsets.symmetric(
+          horizontal: Dimens.grid16, vertical: Dimens.grid16),
+      margin: const EdgeInsets.symmetric(vertical: Dimens.grid16),
       width: double.infinity,
       height: Dimens.grid120,
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(8),
+          borderRadius: BorderRadius.circular(Dimens.grid8),
           color: AppColors.containerColorWhite),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -35,11 +36,11 @@ class _SliderCardState extends State<SliderCard> {
             "Total spent this month",
             style: AppTextStyle.h3Bold(color: AppColors.dark),
           ),
-          SizedBox(height: 20),
+          SizedBox(height: Dimens.grid20),
           Stack(
             children: [
               Container(
-                height: 12,
+                height: Dimens.grid12,
                 width: MediaQuery.of(context).size.width,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(8),
@@ -76,7 +77,7 @@ class _SliderCardState extends State<SliderCard> {
                             border:
                                 Border.all(width: 0.8, color: AppColors.dark),
                             color: AppColors.white,
-                            borderRadius: BorderRadius.circular(12)),
+                            borderRadius: BorderRadius.circular(Dimens.grid12)),
                       )
                     ],
                   ),
@@ -86,16 +87,16 @@ class _SliderCardState extends State<SliderCard> {
                   widthFactor:
                       percentage < 0.2 ? (percentage + 0.1) : percentage,
                   child: Container(
-                    margin: EdgeInsets.only(top: 20),
-                    width: 180,
-                    alignment: widget.totalSpend < 4000
+                    margin: EdgeInsets.only(top: Dimens.grid20),
+                    width: Dimens.grid180,
+                    alignment: widget.totalSpend < 1000
                         ? Alignment.centerLeft
                         : Alignment.centerRight,
                     child: Text(
                       widget.totalSpend.toString().rupee(),
                       maxLines: 1,
-                      overflow: TextOverflow.visible,
-                      style: AppTextStyle.h4Regular(color: AppColors.dark),
+                      overflow: TextOverflow.ellipsis,
+                      style: AppTextStyle.h5Regular(color: AppColors.dark),
                     ),
                   )),
             ],
