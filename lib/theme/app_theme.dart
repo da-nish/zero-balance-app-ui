@@ -63,8 +63,6 @@ class AppTheme {
       onPrimary: AppColors.dark,
       background: AppColors.textPrimary,
     ),
-    // colorScheme:
-    //     ColorScheme.fromSwatch().copyWith(secondary: AppColors.activeGreen)
   );
 
   Type get colors => AppColors;

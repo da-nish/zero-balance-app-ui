@@ -1,6 +1,7 @@
 import 'package:expense_tracker/theme/app_colors.dart';
 import 'package:expense_tracker/theme/app_dimens.dart';
 import 'package:expense_tracker/theme/app_text_style.dart';
+import 'package:expense_tracker/utils/string_extension.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -91,7 +92,7 @@ class _SliderCardState extends State<SliderCard> {
                         ? Alignment.centerLeft
                         : Alignment.centerRight,
                     child: Text(
-                      "\u{20B9}${widget.totalSpend}",
+                      widget.totalSpend.toString().rupee(),
                       maxLines: 1,
                       overflow: TextOverflow.visible,
                       style: AppTextStyle.h4Regular(color: AppColors.dark),
@@ -99,17 +100,6 @@ class _SliderCardState extends State<SliderCard> {
                   )),
             ],
           ),
-          // FractionallySizedBox(
-          //   // widthFactor: percentage,
-          //   child: Container(
-          //     width: 200,
-          //     color: Colors.red,
-          //     child: Text(
-          //       "\u{20B9}${widget.totalSpend}",
-          //       style: AppTextStyle.h4Regular(color: AppColors.dark),
-          //     ),
-          //   ),
-          // ),
         ],
       ),
     );

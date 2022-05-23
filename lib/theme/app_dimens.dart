@@ -88,6 +88,7 @@ class Dimens {
   static const double grid90 = 90;
   static const double grid100 = 100;
   static const double grid120 = 120;
+  static const double grid140 = 140;
   static const double grid150 = 150;
   static const double grid160 = 160;
   static const double grid170 = 170;

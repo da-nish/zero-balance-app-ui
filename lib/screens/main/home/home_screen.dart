@@ -29,7 +29,7 @@ class HomeScreen extends StatelessWidget {
             appBar: CustomMainAppBar(),
             body: ListView(
               children: [
-                SizedBox(height: 10),
+                SizedBox(height: Dimens.grid10),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -45,12 +45,12 @@ class HomeScreen extends StatelessWidget {
                     }),
                   ],
                 ),
-                SizedBox(height: 10),
+                SizedBox(height: Dimens.grid10),
                 Text("Lets help you stay on top \nof your finances",
                     style: AppTextStyle.h3Medium(color: AppColors.textGrey)),
-                SizedBox(height: 10),
+                SizedBox(height: Dimens.grid10),
                 SliderCard(homeController.totalSpend.value),
-                SizedBox(height: 10),
+                SizedBox(height: Dimens.grid10),
                 Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -63,10 +63,10 @@ class HomeScreen extends StatelessWidget {
                         style: AppTextStyle.h4Bold(color: AppColors.blue),
                       )
                     ]),
-                SizedBox(height: 10),
+                SizedBox(height: Dimens.grid8),
                 Container(
-                  height: 140,
-                  width: 140,
+                  height: Dimens.grid140,
+                  width: Dimens.grid140,
                   child: ListView(
                       scrollDirection: Axis.horizontal,
                       children: homeController.categories
@@ -91,16 +91,16 @@ class HomeScreen extends StatelessWidget {
                   "pay with zerobalance card",
                   style: AppTextStyle.h5Medium(color: AppColors.textGrey),
                 ),
-                SizedBox(height: 10),
+                SizedBox(height: Dimens.grid10),
                 Container(
-                  height: 160,
+                  height: Dimens.grid160,
                   child: ListView(
                       scrollDirection: Axis.horizontal,
                       children: homeController.offerItems
                           .map((e) => OfferCard(e))
                           .toList()),
                 ),
-                SizedBox(height: 10),
+                SizedBox(height: Dimens.grid10),
                 ReferCard(),
               ],
             ),

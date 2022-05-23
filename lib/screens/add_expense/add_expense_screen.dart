@@ -3,6 +3,7 @@ import 'package:expense_tracker/models/pair.dart';
 import 'package:expense_tracker/screens/add_expense/add_expense_controller.dart';
 import 'package:expense_tracker/screens/add_expense/widget/item_field.dart';
 import 'package:expense_tracker/theme/app_decoration.dart';
+import 'package:expense_tracker/theme/app_dimens.dart';
 import 'package:expense_tracker/theme/app_text_style.dart';
 import 'package:expense_tracker/theme/app_theme.dart';
 import 'package:expense_tracker/utils/datetime_extension.dart';
@@ -30,13 +31,14 @@ class _AddExpenseScreenState extends State<AddExpenseScreen> {
       body: Container(
         width: double.infinity,
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+          padding: const EdgeInsets.symmetric(
+              horizontal: Dimens.grid10, vertical: Dimens.grid8),
           child: ListView(
             children: [
-              SizedBox(height: 10),
+              SizedBox(height: Dimens.grid10),
               Text(
                   "Record your expenses for them to \nreflectin your catefories"),
-              SizedBox(height: 10),
+              SizedBox(height: Dimens.grid10),
 
               ItemField(
                 "Amount",
@@ -163,11 +165,11 @@ class _AddExpenseScreenState extends State<AddExpenseScreen> {
         },
         child: Container(
           alignment: Alignment.center,
-          padding: const EdgeInsets.all(15),
-          margin: const EdgeInsets.all(20),
+          padding: const EdgeInsets.all(Dimens.grid16),
+          margin: EdgeInsets.all(Dimens.grid20),
           decoration:
               AppBoxDecoration.container(containerColor: AppColors.blue),
-          height: 50,
+          height: Dimens.grid52,
           width: double.infinity,
           child: Text("Done"),
         ),

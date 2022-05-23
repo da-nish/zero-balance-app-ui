@@ -1,4 +1,5 @@
 import 'package:expense_tracker/screens/name_screen/name_controller.dart';
+import 'package:expense_tracker/theme/app_dimens.dart';
 import 'package:expense_tracker/theme/app_theme.dart';
 import 'package:expense_tracker/widgets/text_field/app_text_field.dart';
 import 'package:expense_tracker/widgets/text_field/app_text_field_style.dart';
@@ -17,25 +18,26 @@ class NameScreen extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          SizedBox(height: 120),
+          SizedBox(height: Dimens.grid120),
           Text(
             "Please type your name",
             style: TextStyle(
-                fontSize: 40,
+                fontSize: Dimens.grid40,
                 fontWeight: FontWeight.bold,
                 color: AppColors.grey),
           ),
-          SizedBox(height: 30),
+          SizedBox(height: Dimens.grid28),
           Container(
-            margin: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+            margin: EdgeInsets.symmetric(
+                horizontal: Dimens.grid8, vertical: Dimens.grid4),
             decoration: BoxDecoration(
                 color: AppColors.containerColor,
-                borderRadius: BorderRadius.circular(50)),
+                borderRadius: BorderRadius.circular(Dimens.grid52)),
             child: Row(
               children: [
-                SizedBox(width: 6),
+                SizedBox(width: Dimens.grid8),
                 Icon(Icons.account_circle_rounded),
-                SizedBox(width: 6),
+                SizedBox(width: Dimens.grid8),
                 Expanded(
                   child: AppTextField(
                     startText: "",
