@@ -1,4 +1,4 @@
-import 'package:expense_tracker/screens/main/dashboard_controller.dart';
+import 'package:expense_tracker/models/model.dart';
 
 class AppData {
   int totalSpend = 0;

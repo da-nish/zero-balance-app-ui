@@ -1,4 +1,4 @@
-import 'package:expense_tracker/screens/main/dashboard_controller.dart';
+import 'package:expense_tracker/models/model.dart';
 import 'package:expense_tracker/service/app_data.dart';
 import 'package:get/get.dart';
 
@@ -37,11 +37,4 @@ class AddExpenseController extends GetxController {
     service.addTransaction(transaction);
     Get.offAndToNamed("/dashboard");
   }
-}
-
-class Pair<T, F> {
-  final T first;
-  final F second;
-
-  Pair(this.first, this.second);
 }

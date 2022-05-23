@@ -1,4 +1,4 @@
-import 'package:expense_tracker/screens/main/dashboard_controller.dart';
+import 'package:expense_tracker/models/model.dart';
 import 'package:expense_tracker/service/app_data.dart';
 import 'package:expense_tracker/utils/functions.dart';
 import 'package:get/get.dart';

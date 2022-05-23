@@ -1,6 +1,6 @@
+import 'package:expense_tracker/models/model.dart';
 import 'package:expense_tracker/screens/add_expense/add_expense_controller.dart';
 import 'package:expense_tracker/screens/add_expense/widget/item_field.dart';
-import 'package:expense_tracker/screens/main/dashboard_controller.dart';
 import 'package:expense_tracker/theme/app_decoration.dart';
 import 'package:expense_tracker/theme/app_text_style.dart';
 import 'package:expense_tracker/theme/app_theme.dart';
