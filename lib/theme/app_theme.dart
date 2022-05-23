@@ -7,7 +7,6 @@ class AppTheme {
   static final defaultTheme = ThemeData(
     scaffoldBackgroundColor: AppColors.appBackground,
     fontFamily: Font.urbanist,
-    // brightness: Brightness.dark,
     primaryColor: AppColors.dark,
     highlightColor: Colors.transparent,
     appBarTheme: AppBarTheme(

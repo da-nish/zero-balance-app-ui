@@ -11,11 +11,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      title: 'Flutter Demo',
+      title: "Zero Balance",
       theme: AppTheme.defaultTheme,
       debugShowCheckedModeBanner: false,
       getPages: GetPages.routes(),
-      initialRoute: "/name",
+      initialRoute: GetPages.name,
     );
   }
 }

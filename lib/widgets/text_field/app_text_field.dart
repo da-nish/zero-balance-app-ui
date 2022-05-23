@@ -78,11 +78,6 @@ class _AppTextFieldState extends State<AppTextField> {
   Widget build(BuildContext context) {
     return AnimatedContainer(
         duration: widget.style!.animationsDuration,
-        // decoration: BoxDecoration(
-        //   color: Colors.yellow,
-        // ),
-        // height: widget.style!.height * widget.maxLines,
-        // height: 32,
         child: TextField(
           key: _key,
           controller: _controller,

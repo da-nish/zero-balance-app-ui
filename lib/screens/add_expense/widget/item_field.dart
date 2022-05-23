@@ -1,3 +1,4 @@
+import 'package:expense_tracker/theme/app_dimens.dart';
 import 'package:expense_tracker/theme/app_text_style.dart';
 import 'package:flutter/material.dart';
 import 'package:expense_tracker/theme/app_colors.dart';
@@ -10,11 +11,11 @@ class ItemField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // final homeController = Get.find<DashboardController>();
     return Container(
       height: 60,
-      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
-      margin: const EdgeInsets.symmetric(vertical: 8),
+      padding: const EdgeInsets.symmetric(
+          horizontal: Dimens.grid20, vertical: Dimens.grid8),
+      margin: const EdgeInsets.symmetric(vertical: Dimens.grid8),
       decoration: BoxDecoration(
           color: AppColors.containerColor,
           borderRadius: BorderRadius.circular(5)),
@@ -26,11 +27,7 @@ class ItemField extends StatelessWidget {
             title,
             style: AppTextStyle.h3Regular(color: AppColors.white),
           ),
-          Container(
-              width: 120,
-              // color: Colors.red,
-              alignment: Alignment.centerRight,
-              child: field),
+          Container(width: 120, alignment: Alignment.centerRight, child: field),
         ],
       ),
     );

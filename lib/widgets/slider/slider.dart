@@ -62,7 +62,6 @@ class _SliderCardState extends State<SliderCard> {
               FractionallySizedBox(
                 widthFactor: percentage,
                 alignment: Alignment.centerRight,
-                // heightFactor: 0.2,
                 child: Container(
                   width: double.infinity,
                   alignment: Alignment.centerRight,

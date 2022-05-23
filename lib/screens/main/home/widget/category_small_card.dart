@@ -22,7 +22,7 @@ class CategorySmallCard extends StatelessWidget {
               backgroundColor: item.color,
               radius: 20.0,
               child: ClipRRect(
-                child: SvgPicture.asset(item.icon, height: 18),
+                child: SvgPicture.asset(item.icon, height: 16),
                 borderRadius: BorderRadius.circular(0),
               ),
             ),

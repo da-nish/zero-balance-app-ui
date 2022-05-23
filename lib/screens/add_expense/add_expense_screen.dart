@@ -25,7 +25,6 @@ class _AddExpenseScreenState extends State<AddExpenseScreen> {
   @override
   Widget build(BuildContext context) {
     final controller = Get.find<AddExpenseController>();
-    // homeController.setName(Get.arguments);
     return Scaffold(
       appBar: CustomAppBar("Add expense", showBackButton: true),
       body: Container(
@@ -39,7 +38,6 @@ class _AddExpenseScreenState extends State<AddExpenseScreen> {
               Text(
                   "Record your expenses for them to \nreflectin your catefories"),
               SizedBox(height: Dimens.grid10),
-
               ItemField(
                 "Amount",
                 AppTextField(
@@ -57,7 +55,6 @@ class _AddExpenseScreenState extends State<AddExpenseScreen> {
                   error: null,
                 ),
               ),
-
               ItemField(
                 "Category",
                 DropdownButton(
@@ -154,7 +151,6 @@ class _AddExpenseScreenState extends State<AddExpenseScreen> {
                   },
                 ),
               ),
-              // card1(),
             ],
           ),
         ),

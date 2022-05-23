@@ -21,7 +21,7 @@ class CategoryCard extends StatelessWidget {
       child: Container(
           width: size + 2,
           height: size + 20,
-          margin: const EdgeInsets.only(right: 20),
+          margin: const EdgeInsets.only(right: Dimens.grid20),
           child: Column(
             children: [
               CircularPercentIndicator(

@@ -1,4 +1,5 @@
 import 'package:expense_tracker/models/category_spend_model.dart';
+import 'package:expense_tracker/theme/app_dimens.dart';
 import 'package:expense_tracker/widgets/transaction_widgets/recent_transactions.dart';
 import 'package:expense_tracker/theme/app_assets.dart';
 import 'package:expense_tracker/theme/app_colors.dart';
@@ -16,12 +17,12 @@ class PlanningRecentTrasactions extends StatelessWidget {
     return Container(
       decoration: AppBoxDecoration.container(),
       child: Column(children: [
-        SizedBox(height: 20),
+        SizedBox(height: Dimens.grid20),
         Row(
           children: [
-            SizedBox(width: 20),
+            SizedBox(width: Dimens.grid20),
             SvgPicture.asset(AppAssets.fastCard),
-            SizedBox(width: 20),
+            SizedBox(width: Dimens.grid20),
             Text(
               "recent transactions",
               style: AppTextStyle.h4Regular(color: AppColors.white),
@@ -31,9 +32,9 @@ class PlanningRecentTrasactions extends StatelessWidget {
         ...transactionList
             .map((e) => RecentTransaction(e, showStatus: true))
             .toList(),
-        SizedBox(height: 20),
+        SizedBox(height: Dimens.grid20),
         Container(
-          padding: EdgeInsets.symmetric(horizontal: 20),
+          padding: EdgeInsets.symmetric(horizontal: Dimens.grid20),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -50,7 +51,7 @@ class PlanningRecentTrasactions extends StatelessWidget {
             ],
           ),
         ),
-        SizedBox(height: 20),
+        SizedBox(height: Dimens.grid20),
       ]),
     );
   }

@@ -1,6 +1,7 @@
 import 'package:expense_tracker/models/category_spend_model.dart';
 import 'package:expense_tracker/theme/app_colors.dart';
 import 'package:expense_tracker/theme/app_decoration.dart';
+import 'package:expense_tracker/theme/app_dimens.dart';
 import 'package:expense_tracker/theme/app_text_style.dart';
 import 'package:expense_tracker/utils/datetime_extension.dart';
 import 'package:expense_tracker/utils/string_extension.dart';
@@ -16,19 +17,20 @@ class RecentTransaction extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+      padding: EdgeInsets.symmetric(
+          vertical: Dimens.grid20, horizontal: Dimens.grid20),
       decoration: AppBoxDecoration.borderBottom(),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           MerchantCard(transaction.image),
-          SizedBox(width: 10),
+          SizedBox(width: Dimens.grid10),
           Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(transaction.marchent),
-              SizedBox(height: 4),
+              SizedBox(height: Dimens.grid4),
               Text(
                 transaction.date.dateFormat(),
                 style: AppTextStyle.h5Regular(color: AppColors.textSecondary),

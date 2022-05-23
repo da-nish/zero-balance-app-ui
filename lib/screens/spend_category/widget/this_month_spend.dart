@@ -3,6 +3,7 @@ import 'package:expense_tracker/models/enums.dart';
 import 'package:expense_tracker/screens/main/home/widget/category_small_card.dart';
 import 'package:expense_tracker/screens/spend_category/spend_category_controller.dart';
 import 'package:expense_tracker/theme/app_decoration.dart';
+import 'package:expense_tracker/theme/app_dimens.dart';
 import 'package:expense_tracker/utils/functions.dart';
 import 'package:expense_tracker/utils/string_extension.dart';
 import 'package:flutter/material.dart';
@@ -26,7 +27,8 @@ class _ThisMonthSpendState extends State<ThisMonthSpend> {
     ChartView selectedView = widget.controller.selectChartView.value;
     return Container(
         width: double.infinity,
-        padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 8),
+        padding: const EdgeInsets.symmetric(
+            vertical: Dimens.grid16, horizontal: Dimens.grid8),
         height: screen.height * 0.5,
         decoration: AppBoxDecoration.container(),
         child: Column(
@@ -45,7 +47,7 @@ class _ThisMonthSpendState extends State<ThisMonthSpend> {
                     () => widget.controller.updateChart(ChartView.Days90)),
               ],
             ),
-            SizedBox(height: 12),
+            SizedBox(height: Dimens.grid12),
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -58,7 +60,7 @@ class _ThisMonthSpendState extends State<ThisMonthSpend> {
                             color: AppColors.buttonText)),
                   ],
                 ),
-                SizedBox(width: 12),
+                SizedBox(width: Dimens.grid12),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -66,7 +68,7 @@ class _ThisMonthSpendState extends State<ThisMonthSpend> {
                     Text("Spend this month",
                         style: AppTextStyle.h4Regular(
                             color: AppColors.buttonText)),
-                    SizedBox(height: 4),
+                    SizedBox(height: Dimens.grid4),
                     Text(
                         "${widget.item.percentage * widget.item.totalSpend}"
                             .toString()

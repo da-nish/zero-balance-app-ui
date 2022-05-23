@@ -33,10 +33,6 @@ class HomeController extends GetxController {
       OffersModel(
           "10% cashback", "Activate offer to reveal", AppAssets.amazonImage)
     ];
-    // controller.display();
-    // for (CategoryModel e in categories) {
-    //   print("${e.type.toString()} ==> ${e.percentage}");
-    // }
     refresh();
   }
 }

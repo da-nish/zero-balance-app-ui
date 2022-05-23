@@ -40,7 +40,6 @@ class HomeScreen extends StatelessWidget {
                         style: AppTextStyle.h1Bold(),
                       ),
                     ),
-                    // Expanded(child: Container()),
                     AddButton(() {
                       Get.toNamed(GetPages.addExpense);
                     }),

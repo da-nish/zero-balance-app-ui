@@ -30,20 +30,15 @@ class CircularChart extends StatelessWidget {
                 controller.totalSpend, controller.totalEntertainment),
             2
           ],
-
-          // [0.2, 0.2, 0.3, 2],
           colors: [
             AppColors.foodColor,
             AppColors.shoppingColor,
             AppColors.entertainment,
             AppColors.white
           ],
-
-          animationDuration:
-              const Duration(milliseconds: 500), // duration of animation
-          animationCurve: Curves.easeIn, // smoothness of animation
-          innerIcon: Icon(Icons
-              .integration_instructions), // to display some icon related to text
+          animationDuration: const Duration(milliseconds: 500),
+          animationCurve: Curves.easeIn,
+          innerIcon: Icon(Icons.integration_instructions),
           innerWidget: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -55,12 +50,12 @@ class CircularChart extends StatelessWidget {
                   style: AppTextStyle.h1Bold(color: AppColors.white),
                   textAlign: TextAlign.center),
             ],
-          ), // to show custom innerWidget (to display set showTotalPercentage to false)
-          trackColor: Colors.white, // to change color of track
-          progressBarWidth: 3.0, // to change width of progressBar
-          trackWidth: 10.0, // to change width of track
-          labelTextStyle: TextStyle(), // to change TextStyle of label
-          percentageTextStyle: TextStyle(), // to change TextStyle of percentage
+          ),
+          trackColor: Colors.white,
+          progressBarWidth: 3.0,
+          trackWidth: 10.0,
+          labelTextStyle: TextStyle(),
+          percentageTextStyle: TextStyle(),
         )),
       ],
     );
