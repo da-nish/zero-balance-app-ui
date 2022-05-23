@@ -23,6 +23,7 @@ class HomeScreen extends StatelessWidget {
     final homeController = Get.find<HomeController>();
     homeController.init();
     return Container(
+      color: AppColors.appBackground,
       child: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: Dimens.grid16),
