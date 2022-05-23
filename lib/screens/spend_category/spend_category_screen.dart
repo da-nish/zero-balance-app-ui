@@ -1,3 +1,5 @@
+import 'package:expense_tracker/screens/main/dashboard_controller.dart';
+import 'package:expense_tracker/screens/spend_category/spend_category_controller.dart';
 import 'package:expense_tracker/screens/spend_category/widget/this_month_spend.dart';
 import 'package:expense_tracker/theme/app_assets.dart';
 import 'package:expense_tracker/theme/app_colors.dart';
@@ -7,14 +9,16 @@ import 'package:expense_tracker/utils/string_extension.dart';
 import 'package:expense_tracker/widgets/appbar/appbar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
 
 class SpendCategoryScreen extends StatelessWidget {
   SpendCategoryScreen();
 
   @override
   Widget build(BuildContext context) {
-    // final homeController = Get.find<AddExpenseController>();
-    // homeController.setName(Get.arguments);
+    CategoryModel item = Get.arguments;
+    final controller = Get.find<SpendCategoryController>();
+    controller.init(item.type);
 
     return Scaffold(
       appBar: CustomAppBar("Food", showBackButton: true),
@@ -25,40 +29,23 @@ class SpendCategoryScreen extends StatelessWidget {
           child: ListView(
             children: [
               SizedBox(height: 10),
-              ThisMonthSpend(),
+              ThisMonthSpend(item),
               SizedBox(height: 10),
               Container(
                 decoration: AppBoxDecoration.container(),
                 child: Column(
-                  children: [
-                    _row(),
-                    _row(),
-                    _row(),
-                  ],
-                ),
+                    children:
+                        controller.transactionList.map((e) => _row()).toList()),
               ),
               SizedBox(height: 10),
               Container(
                 decoration: AppBoxDecoration.container(),
                 child: Column(
-                  children: [
-                    _row1(),
-                    _row1(),
-                    _row1(),
-                  ],
-                ),
+                    children: controller.transactionList
+                        .map((e) => _row1())
+                        .toList()),
               ),
               SizedBox(height: 10),
-              Container(
-                decoration: AppBoxDecoration.container(),
-                child: Column(
-                  children: [
-                    _row2(),
-                    _row2(),
-                    _row2(),
-                  ],
-                ),
-              )
             ],
           ),
         ),
@@ -143,62 +130,5 @@ class SpendCategoryScreen extends StatelessWidget {
         ],
       ),
     );
-  }
-
-  Widget _row2() {
-    return Container(
-      height: 95,
-      padding: EdgeInsets.symmetric(vertical: 20, horizontal: 20),
-      decoration: AppBoxDecoration.borderBottom(),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          // CategorySmallCard(
-          //   CategoryModel.model(CategoryType.Food),
-          // ),
-          SizedBox(width: 10),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text("Food"),
-              SizedBox(height: 4),
-              Row(
-                children: [
-                  circularImage(AppAssets.swiggyColored),
-                  circularImage(AppAssets.amazon),
-                  circularImage(AppAssets.amazon),
-                ],
-              )
-            ],
-          ),
-          Expanded(child: Container()),
-          Center(
-            child: Text(
-              "1500".rupee(),
-              style: AppTextStyle.h3Bold(),
-            ),
-          ),
-          SizedBox(width: 10),
-          Center(
-            child: Icon(Icons.arrow_forward_ios_rounded, size: 16),
-          ),
-        ],
-      ),
-    );
-  }
-
-  Widget circularImage(String image) {
-    return Container(
-        margin: const EdgeInsets.only(right: 4),
-        child: CircleAvatar(
-          backgroundColor: AppColors.white,
-          radius: 10,
-          child: SvgPicture.asset(
-            image,
-            height: 10,
-          ),
-        ));
   }
 }

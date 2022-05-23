@@ -31,7 +31,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
         screens: [
           _wrapPage(HomeScreen()),
           _wrapPage(PlanningScreen()),
-          _wrapPage(SpendCategoryScreen()),
+          _wrapPage(Container()),
           _wrapPage(Container()),
         ],
         items: [

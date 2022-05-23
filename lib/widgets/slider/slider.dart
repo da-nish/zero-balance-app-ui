@@ -83,11 +83,11 @@ class _SliderCardState extends State<SliderCard> {
               ),
               FractionallySizedBox(
                   widthFactor:
-                      percentage < 0.2 ? (percentage + 0.08) : percentage,
+                      percentage < 0.2 ? (percentage + 0.1) : percentage,
                   child: Container(
                     margin: EdgeInsets.only(top: 20),
-                    width: 150,
-                    alignment: widget.totalSpend < 1000
+                    width: 180,
+                    alignment: widget.totalSpend < 4000
                         ? Alignment.centerLeft
                         : Alignment.centerRight,
                     child: Text(

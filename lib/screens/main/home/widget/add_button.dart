@@ -1,3 +1,4 @@
+import 'package:expense_tracker/screens/add_expense/add_expense_screen.dart';
 import 'package:expense_tracker/theme/app_assets.dart';
 import 'package:expense_tracker/theme/app_colors.dart';
 import 'package:expense_tracker/theme/app_text_style.dart';
@@ -21,7 +22,7 @@ class AddButton extends StatelessWidget {
           SvgPicture.asset(AppAssets.plus),
           InkWell(
             onTap: () {
-              Get.offAndToNamed("/add-expense");
+              Get.toNamed("/add-expense");
             },
             child: Text("Add expense",
                 style: AppTextStyle.h4Bold(color: AppColors.white)),

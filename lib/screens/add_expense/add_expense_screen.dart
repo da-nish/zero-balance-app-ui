@@ -25,9 +25,7 @@ class _AddExpenseScreenState extends State<AddExpenseScreen> {
     final controller = Get.find<AddExpenseController>();
     // homeController.setName(Get.arguments);
     return Scaffold(
-      appBar: CustomAppBar("Add expense", showBackButton: true, onTap: () {
-        Get.back();
-      }),
+      appBar: CustomAppBar("Add expense", showBackButton: true),
       body: Container(
         width: double.infinity,
         child: Padding(
@@ -185,7 +183,6 @@ class _AddExpenseScreenState extends State<AddExpenseScreen> {
         lastDate: DateTime.now(),
         firstDate: DateTime(2020, 1));
     if (picked != null && picked != selectedDate) {
-      print(picked.toString());
       setState(() {
         selectedDate = picked;
       });

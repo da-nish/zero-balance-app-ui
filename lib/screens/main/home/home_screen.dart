@@ -20,7 +20,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final dashboardController = Get.find<DashboardController>();
     final homeController = Get.find<HomeController>();
-
+    homeController.init();
     return Container(
       color: AppColors.appBackground,
       child: SafeArea(
@@ -31,12 +31,6 @@ class HomeScreen extends StatelessWidget {
             body: ListView(
               children: [
                 SizedBox(height: 10),
-                InkWell(
-                    onTap: () {
-                      final cc = Get.find<AppData>();
-                      cc.display();
-                    },
-                    child: Text("dsd")),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -54,7 +48,7 @@ class HomeScreen extends StatelessWidget {
                 Text("Lets help you stay on top \nof your finances",
                     style: AppTextStyle.h3Medium(color: AppColors.textGrey)),
                 SizedBox(height: 10),
-                SliderCard(10000),
+                SliderCard(homeController.totalSpend.value),
                 SizedBox(height: 10),
                 Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,

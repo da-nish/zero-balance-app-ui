@@ -1,3 +1,6 @@
+import 'package:expense_tracker/screens/main/dashboard_controller.dart';
+import 'package:expense_tracker/screens/main/home/widget/category_card.dart';
+import 'package:expense_tracker/screens/main/home/widget/category_small_card.dart';
 import 'package:expense_tracker/theme/app_decoration.dart';
 import 'package:expense_tracker/utils/string_extension.dart';
 import 'package:flutter/material.dart';
@@ -6,7 +9,8 @@ import 'package:expense_tracker/theme/app_colors.dart';
 import 'package:expense_tracker/theme/app_text_style.dart';
 
 class ThisMonthSpend extends StatelessWidget {
-  const ThisMonthSpend({Key? key}) : super(key: key);
+  final CategoryModel item;
+  const ThisMonthSpend(this.item, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -34,14 +38,8 @@ class ThisMonthSpend extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                // CategoryCard(
-                //     CategoryModel("Food", AppColors.activeBlue, AppAssets.food),
-                //     size: 100),
-                // CategorySmallCard(
-                //   CategoryModel.model(CategoryType.Food),
-                // ),
+                CategorySmallCard(item),
                 SizedBox(width: 12),
-
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -50,7 +48,10 @@ class ThisMonthSpend extends StatelessWidget {
                         style: AppTextStyle.h4Regular(
                             color: AppColors.buttonText)),
                     SizedBox(height: 4),
-                    Text("1500".rupee(),
+                    Text(
+                        "${item.percentage * item.totalSpend}"
+                            .toString()
+                            .rupee(),
                         style:
                             AppTextStyle.h2Bold(color: AppColors.textPrimary)),
                   ],

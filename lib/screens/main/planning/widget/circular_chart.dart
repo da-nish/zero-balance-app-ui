@@ -1,12 +1,19 @@
+import 'package:expense_tracker/screens/main/planning/planning_controller.dart';
 import 'package:expense_tracker/theme/app_assets.dart';
 import 'package:expense_tracker/theme/app_colors.dart';
 import 'package:expense_tracker/theme/app_text_style.dart';
+import 'package:expense_tracker/utils/functions.dart';
+import 'package:expense_tracker/utils/string_extension.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:multi_circular_slider/multi_circular_slider.dart';
 
 class CircularChart extends StatelessWidget {
-  const CircularChart({Key? key}) : super(key: key);
+  final int totalSpend;
+  final PlanningController controller;
+
+  const CircularChart(this.totalSpend, this.controller, {Key? key})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,15 +23,22 @@ class CircularChart extends StatelessWidget {
         Container(
             child: MultiCircularSlider(
           size: MediaQuery.of(context).size.width * .7,
-          values: [0.2, 0.2, 0.3, 2],
-          colors: [
-            Color(0xFFFD1960),
-            Color(0xFF29D3E8),
-            Color(0xFF18C737),
-            Color(0xFFFFCC05)
+          values: [
+            findPercentage(controller.totalSpend, controller.totalFood),
+            findPercentage(controller.totalSpend, controller.totalShopping),
+            findPercentage(
+                controller.totalSpend, controller.totalEntertainment),
+            2
           ],
-          showTotalPercentage: false, // to display total percentage in center
-          label: 'This is label text', // label to display below percentage
+
+          // [0.2, 0.2, 0.3, 2],
+          colors: [
+            AppColors.foodColor,
+            AppColors.shoppingColor,
+            AppColors.entertainment,
+            AppColors.white
+          ],
+
           animationDuration:
               const Duration(milliseconds: 500), // duration of animation
           animationCurve: Curves.easeIn, // smoothness of animation
@@ -37,7 +51,7 @@ class CircularChart extends StatelessWidget {
               SizedBox(height: 10),
               Text('This month spends', textAlign: TextAlign.center),
               SizedBox(height: 10),
-              Text('\u{20B9} 10000',
+              Text(totalSpend.toString().rupee(),
                   style: AppTextStyle.h1Bold(color: AppColors.white),
                   textAlign: TextAlign.center),
             ],

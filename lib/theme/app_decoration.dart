@@ -16,7 +16,7 @@ class AppBoxDecoration {
           borderRadius: BorderRadius.all(const Radius.circular(4)));
 
   static BoxDecoration borderBottom(
-          {Color color = AppColors.grey, double width = 1}) =>
+          {Color color = AppColors.textGrey, double width = 1}) =>
       BoxDecoration(
           border:
               Border(bottom: BorderSide(width: width, color: AppColors.dark)));

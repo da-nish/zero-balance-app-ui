@@ -8,7 +8,17 @@ class AppData {
     CategoryType.Entertainment: 0,
   };
   List<CategorySpendModel> _transactions = [];
-  List<CategorySpendModel> allTransactions() => _transactions;
+
+  List<CategorySpendModel> recentTransactions() {
+    // return _transactions;
+    List<CategorySpendModel> recentList = [];
+    int i = 0;
+    for (CategorySpendModel item in _transactions) {
+      recentList.add(item);
+      if (i++ >= 5) return recentList;
+    }
+    return recentList;
+  }
 
   void addTransaction(CategorySpendModel newTransaction) {
     _transactions.add(newTransaction);
@@ -17,18 +27,9 @@ class AppData {
       categorySpend[newTransaction.type] =
           (categorySpend[newTransaction.type]! + newTransaction.amount);
     }
-    display();
   }
 
-  void display() {
-    print("====Statement====");
-    for (CategorySpendModel item in _transactions) {
-      print("total:: $totalSpend");
-      print("::> ${item.date.toString()}");
-      print("::> ${item.amount}");
-      print("::> ${item.type.toString()}");
-      print("::> ${item.paidVia}");
-      print("======================");
-    }
+  List<CategorySpendModel> getCategory(CategoryType type) {
+    return _transactions.where((element) => (element.type == type)).toList();
   }
 }
